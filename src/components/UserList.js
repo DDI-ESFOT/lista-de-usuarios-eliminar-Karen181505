@@ -31,7 +31,12 @@ const UserList = ({ users }) => {
   };
 
   const handleEraseUser = (event) => {
-    
+    console.log("Borrar")
+    setUsersList (( arr ) => {
+      let i = arr.indexOf( arr.length  );
+      arr.splice( i, arr.length-1 );
+      return [...arr];
+  });
   }
 
   return (
